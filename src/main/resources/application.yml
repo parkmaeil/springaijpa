@@ -19,4 +19,5 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: 'true'
-    open-in-view: false
+    open-in-view: false # Lazy -> N+1 문제 발생할수있다.
+    # Open Session in View(OSIV)
