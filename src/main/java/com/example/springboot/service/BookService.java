@@ -59,4 +59,8 @@ public class BookService {
         reviewDTO.setCreatedAt(review.getCreatedAt());
         return reviewDTO;
     }
+
+    public Book save(Book book){
+        return bookRepository.save(book);
+    }
 }
