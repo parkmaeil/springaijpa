@@ -19,5 +19,5 @@ public class BookDTO { // 응답용, 요청용(BookPayloadDTO)
     private int price;
     private String author;
     private int page;
-    private List<ReviewDTO> reviews;
+    private List<ReviewDTO> reviews; // null
 }

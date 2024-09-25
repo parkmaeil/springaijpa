@@ -43,6 +43,7 @@ public class BookRestController {
             view.setPrice(book.getPrice());
             view.setAuthor(book.getAuthor());
             view.setPage(book.getPage());
+            // view.setReviews();
         }catch (Exception e){
             e.printStackTrace();
         }
