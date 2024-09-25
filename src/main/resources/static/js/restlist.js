@@ -12,11 +12,21 @@
    let html="";
    books.forEach(book=>{
      html+="<tr>";
-     html+="<td>1</td>";
-     html+="<td>1</td>";
-     html+="<td>1</td>";
-     html+="<td>1</td>";
-     html+="<td>1</td>";
+     html+=`<td>${book.id}</td>`;
+     html+=`<td>${book.title}</td>`;
+     html+=`<td>${book.price}</td>`;
+     html+=`<td>${book.author}</td>`;
+     html+=`<td>${book.page}</td>`;
+     // 리뷰출력
+     html+="<td><ul>";
+         if(book.reviews && book.reviews.length>0){
+              book.reviews.forEach(review=>{
+                 html+=`<li>${review.content}</li>`;
+              });
+         }else{
+              html+="<li>No reviews</li>";
+         }
+     html+="</ul></td>";
      html+="</tr>";
    });
    document.getElementById("list").innerHTML=html; // ?
